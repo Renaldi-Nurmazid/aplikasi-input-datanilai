@@ -8,7 +8,9 @@ $no = 1;
      $data = mysqli_query($mysqli," SELECT * FROM datanilai");
      while($row = mysqli_fetch_array($data))
      {
-        $tabledata .= "
+      $totalnolai=($row["kehadiran"]+$row["tugas"]+$row["pts"]+$row["pas"]);
+      $rata_rata = ($totalnolai / 4);  
+      $tabledata .= "
         <tr>
               <td>".$row["nis"]."</td>
               <td>".$row["nama_lengkap"]."</td>
@@ -18,6 +20,8 @@ $no = 1;
               <td>".$row["tugas"]."</td>
               <td>".$row["pts"]."</td>
               <td>".$row["pas"]."</td>
+              <td>".$rata_rata."</td>
+              
         <tr>      
               ";
               $no++;
@@ -37,6 +41,7 @@ $no = 1;
                    <th>TUGAS</th>
                    <th>PTS</th>
                    <th>PAS</th>
+                   <th>NILAI RATA-RATA</th>
                <tr>
                $tabledata
                </table>    

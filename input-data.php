@@ -20,6 +20,8 @@
      $data = mysqli_query($mysqli," SELECT * FROM datanilai");
      while($row = mysqli_fetch_array($data))
      {
+      $totalnolai=($row["kehadiran"]+$row["tugas"]+$row["pts"]+$row["pas"]);
+      $rata_rata = ($totalnolai / 4);
         $tabledata .= "
         <tr>
               <td>".$row["nis"]."</td>
@@ -30,6 +32,7 @@
               <td>".$row["tugas"]."</td>
               <td>".$row["pts"]."</td>
               <td>".$row["pas"]."</td>
+              <td>".$rata_rata."</td>
               <td>
               <a class='btn btn-sm btn-success' href='input-edit.php?nis=".$row["nis"]."'>Edit</a>
               &nbsp;-&nbsp;
@@ -52,6 +55,7 @@
                    <th>NILAI TUGAS</th>
                    <th>NILAI PTS</th>
                    <th>NILAI PAS</th>
+                   <th>NILAI RATA-RATA</th>
                    <th>AKSI</th>
                <tr>
                $tabledata

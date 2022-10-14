@@ -47,7 +47,7 @@
     if( isset($_POST["simpan"]) ){
         $nis = $_POST["nis"];
         $nama_lengkap = $_POST["nama_lengkap"];
-        $jenis_kelamin = $_POST["jenis_kelamink"];
+        $jenis_kelamin = $_POST["jenis_kelamin"];
         $kelas = $_POST["kelas"];
         $kehadiran = $_POST["kehadiran"];
         $tugas = $_POST["tugas"];

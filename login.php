@@ -7,6 +7,8 @@
     <label>password</label><br>
     <input class="form-control" type="password" name="password" placeholder="Ex. ---" />
     <br>
+    <a href="registrasi.php"><h5>Belum punya akun?</h5></a>
+    <br>
     <input class="form-control btn btn-primary" type="submit" name="login" value="Masuk" />
 </form>
 
